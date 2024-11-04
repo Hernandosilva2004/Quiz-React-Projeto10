@@ -25,7 +25,7 @@ function Quiz() {
 
     const responder = (respostaSelecionada) => {
         setRespostas([...respostas, respostaSelecionada]);
-        if (indicePergunta + 1 < perguntas.lenght) {
+        if (indicePergunta + 1 < perguntas.length) {
             setIndicePergunta(indicePergunta + 1)
         } else {
             calcularResultado();
@@ -34,7 +34,7 @@ function Quiz() {
 
     const calcularResultado = () => {
         let pontuacao = 0;
-        for (let i = 0; i < perguntas.lenght; i++) {
+        for (let i = 0; i < perguntas.length; i++) {
             if (respostas[i] === perguntas[i].resposta) {
                 pontuacao++;
             }
